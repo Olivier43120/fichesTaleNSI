@@ -2,6 +2,6 @@
     "titre": "Année scolaire 2026-2027",
     "pdf": "pdf/recursivite_4.pdf",
     "notebook": "https://gist.githubusercontent.com/Olivier43120/8c4ec9fb194fb46225cf3d54a72dd60d/raw/bdfa05e9cbb2016b485abe70ebb2ac24cba9a8e3/recursivite4.ipynb",
-    "descriptif": "On considère dans ce sujet des images en niveaux de gris, c'est-à-dire composées de pixels décrits par une valeur entre 0 et 255 représentant l'intensité du niveau de gris, allant de noir pour la valeur 0 à blanc pour la valeur 255. Une image est alors vue comme une liste de valeurs entre 0 et 255 données par les valeurs des pixels ligne par ligne. Les images manipulées sont des dessins ou des schémas présentant de grandes zones d'un même gris.",
+    "descriptif": "Dans ce TP, il est question d'appliquer ce que nous savons faire avec la récursivité à des situations plus compliquées de programmation, mais néanmoins classique. L'exercice sur le baguenaudier, en particulier, a été l'objet d'un exercice dans une épreuve de Bac",
     "lien": "archives/recursivite4.zip"
 }
