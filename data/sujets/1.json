@@ -1,0 +1,6 @@
+{
+    "titre": "Année scolaire 2026-2027",
+    "pdf": "https://infoacamus.free.fr/pdf/TNSI/Recursivite/recursivite_4.pdf",
+    "notebook": "https://gist.githubusercontent.com/Olivier43120/8c4ec9fb194fb46225cf3d54a72dd60d/raw/bdfa05e9cbb2016b485abe70ebb2ac24cba9a8e3/recursivite4.ipynb",
+    "descriptif": "On considère dans ce sujet des images en niveaux de gris, c'est-à-dire composées de pixels décrits par une valeur entre 0 et 255 représentant l'intensité du niveau de gris, allant de noir pour la valeur 0 à blanc pour la valeur 255. Une image est alors vue comme une liste de valeurs entre 0 et 255 données par les valeurs des pixels ligne par ligne. Les images manipulées sont des dessins ou des schémas présentant de grandes zones d'un même gris.<br><br><p style=\"margin-top:10px; font-weight:bold; color:#065f46;\">Télécharger le <a href=\"sujets/pratique/1-26.zip\" target=\"_blank\">fichier</a>.</p>"
+}
