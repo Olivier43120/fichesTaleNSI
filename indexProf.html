@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="images/camus.png" />
+    <title>Maths à Camus</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        /* ================= BASE ================= */
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-size: cover;
+            position: relative;
+            z-index: 0;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-color: rgba(255, 255, 255, 0.85);
+            z-index: -1;
+        }
+
+        a, a:hover, a:visited {
+            color: #1d1f1e;
+        }
+
+        #header, #page-header, .menu-button, .submit-button, .active-btn {
+            background: #1d1f1e;
+        }
+
+        .main-container {
+            max-width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-container h1 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #2c3e50;
+        }
+
+        /* ===================== PDF ===================== */
+
+        .pdf-wrapper {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: nowrap;
+        }
+
+        .pdf-card {
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.4s ease;
+        }
+
+        .pdf-card.sujet {
+            width: 30%;
+            cursor: pointer;
+        }
+
+        .pdf-card.correction {
+            width: 70%;
+        }
+
+        .pdf-wrapper.expanded .pdf-card.sujet {
+            width: 50%;
+        }
+
+        .pdf-wrapper.expanded .pdf-card.correction {
+            width: 50%;
+        }
+
+        .pdf-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .pdf-title {
+            background: linear-gradient(135deg, #1d1f1e, #adafae);
+            color: white;
+            padding: 14px 20px;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .pdf-title.correction {
+            background: linear-gradient(135deg, #adafae, #1d1f1e);
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .pdf-frame {
+            height: 850px;
+        }
+
+        @media (max-width: 900px) {
+            .pdf-wrapper {
+                flex-direction: column;
+            }
+
+            .pdf-card {
+                width: 100% !important;
+            }
+
+            .pdf-frame {
+                height: 600px;
+            }
+        }
+
+        .toggle-hint {
+            font-size: 14px;
+            font-weight: 400;
+            margin-left: 10px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .pdf-title:hover .toggle-hint {
+            opacity: 1;
+        }
+
+        .exo-badge {
+            position: absolute;
+            left: 30px;
+            background: linear-gradient(135deg, #1d1f1e, #adafae);
+            color: white;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 18px;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.15);
+        }
+
+        .titre-sujet {
+            font-size: 28px;
+            font-weight: 800;
+            color: #1d1f1e;
+            margin: 0;
+            text-align: center;
+        }
+
+        .exo-header {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .exo-header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .exo-badge {
+                position: static;
+                font-size: 14px;
+                padding: 4px 12px;
+            }
+
+            .titre-sujet {
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .exo-badge,
+            .titre-sujet,
+            form {
+                flex-basis: 100%;
+                text-align: center !important;
+                margin-bottom: 5px;
+            }
+
+            select {
+                min-width: 100% !important;
+            }
+        }
+
+        .exo-description {
+            margin-top: 40px;
+            background: rgba(248, 250, 252, 0.75);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .description-content {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .description-content::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(to bottom, #1d1f1e, #adafae, #1d1f1e);
+            border-radius: 4px;
+        }
+
+        /* État de chargement */
+        .loading-msg {
+            text-align: center;
+            padding: 40px;
+            font-size: 18px;
+            color: #1d1f1e;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='header'>
+        <img src="images/camus.png" id="logo" />
+        <span id='site-title'><a href="index.html">Maths à Camus</a></span>
+    </div>
+
+    <div id="main">
+        <h1>Travaux Pratiques en T<sup>ale</sup> NSI</h1>
+
+        <main class="main-container">
+
+            <div class="exo-description">
+                <div class="exo-header">
+                    <div style="
+                        display:flex;
+                        align-items:center;
+                        justify-content:space-between;
+                        flex-wrap:wrap;
+                        height:auto;
+                        padding:10px 20px;
+                    ">
+                        <div class="exo-badge" style="margin-bottom:5px;" id="exo-badge">
+                            Document
+                        </div>
+
+                        <div style="flex:1; text-align:center; margin-bottom:5px;">
+                            <h1 class="titre-sujet" id="titre-sujet">Chargement...</h1>
+                        </div>
+
+                        <form action="" method="get" style="margin:0; display:flex; align-items:center;">
+                            <select name="id" id="id-select" style="
+                                padding:8px 14px;
+                                font-size:16px;
+                                border:1px solid #dcdde1;
+                                border-radius:12px;
+                                background:linear-gradient(135deg, #ffffff, #f1f2f6);
+                                color:#2f3640;
+                                box-shadow:0 4px 10px rgba(0,0,0,0.08);
+                                cursor:pointer;
+                                min-width:160px;
+                                transition:all 0.3s ease;
+                            ">
+                                <option value="" disabled selected>📘 Sujets 2026</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="description-content" id="description-content">
+                    <p class="loading-msg">Chargement du sujet...</p>
+                </div>
+            </div>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.8/pdfobject.min.js"></script>
+            <div class="pdf-wrapper">
+
+                <div class="pdf-card sujet">
+                    <div class="pdf-title" style="display:flex; justify-content:space-between; align-items:center;">
+                        📘 Document <span class="toggle-hint">— Cliquer pour agrandir</span>
+                        <a id="pdf-link" href="#" target="_blank" rel="noopener noreferrer" title="Télécharger le document en PDF" style="text-decoration:none;
+                            background:#dc2626;
+                            color:white;
+                            padding:4px 10px;
+                            border-radius:4px;
+                            font-weight:bold;
+                            font-size:0.6em;
+                            display:inline-block;
+                            transition:all 0.2s ease;"
+                            onmouseover="this.style.transform='scale(1.08)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.3)';"
+                            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+                            PDF
+                        </a>
+                    </div>
+                    <div id="pdf1" class="pdf-frame"></div>
+                </div>
+
+                <div class="pdf-card correction">
+                    <div class="pdf-title correction" style="display:flex; justify-content:space-between; align-items:center;">
+                        ✅ Notebook - avec corrigés
+                    </div>
+
+                    <iframe id="notebook-frame" src="" width="100%" height="850px" frameborder="0" allowfullscreen>
+                    </iframe>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        async function init() {
+            const params = new URLSearchParams(location.search);
+            let id = parseInt(params.get('id'), 10) || 1;
+
+            // Manifeste listant les documents disponibles (data/sujets/index.json)
+            // Format attendu : [1, 2, 3, ...]
+            let manifest = [1];
+            try {
+                const resManifest = await fetch('data/sujets/index.json');
+                if (resManifest.ok) {
+                    manifest = await resManifest.json();
+                }
+            } catch (e) {
+                console.warn('Manifeste data/sujets/indexProf.json introuvable, utilisation du sujet 1 par défaut.');
+            }
+
+            if (!manifest.includes(id)) {
+                id = manifest[0] || 1;
+            }
+
+            // Chargement du sujet demandé
+            let sujet;
+            try {
+                const res = await fetch(`data/sujets/${id}.json`);
+                if (!res.ok) throw new Error('Fichier introuvable');
+                sujet = await res.json();
+            } catch (e) {
+                sujet = {
+                    titre: 'Sujet indisponible',
+                    pdf: '',
+                    notebook: '',
+                    descriptif: '<p><em>Descriptif indisponible.</em></p>'
+                };
+            }
+
+            // Titre de la page
+            document.title = `Maths à Camus — ${sujet.titre || 'Document ' + id}`;
+
+            // Remplissage du contenu (textContent : pas d'injection HTML pour titre/badge)
+            document.getElementById('exo-badge').textContent = `Document ${id}`;
+            document.getElementById('titre-sujet').textContent = sujet.titre || '';
+
+            // Le descriptif est volontairement injecté en HTML (contenu défini par l'auteur du site)
+            let description = sujet.descriptif || '<p><em>Descriptif indisponible.</em></p>';
+
+            // Ajout du lien de téléchargement si renseigné
+            if (sujet.lien && sujet.lien.trim() !== "") {
+                description += `
+                    <br><br>
+                    <p style="margin-top:10px; font-weight:bold; color:#065f46;">
+                        Télécharger le <a href="${sujet.lien}" target="_blank">fichier</a>.
+                    </p>
+                `;
+            }
+
+            document.getElementById('description-content').innerHTML = description;
+
+            // PDF
+            const pdfLink = document.getElementById('pdf-link');
+            pdfLink.href = sujet.pdf || '#';
+            if (sujet.pdf && window.PDFObject) {
+                PDFObject.embed(sujet.pdf, '#pdf1');
+            }
+
+            // Notebook (iframe Basthon) — encodage correct de l'URL du notebook
+            const notebookFrame = document.getElementById('notebook-frame');
+            if (sujet.notebook) {
+                notebookFrame.src = `https://notebook.basthon.fr/?from=${encodeURIComponent(sujet.notebook)}`;
+            }
+
+            // Construction du menu déroulant à partir du manifeste
+            const select = document.getElementById('id-select');
+            manifest
+                .slice()
+                .sort((a, b) => a - b)
+                .forEach(sid => {
+                    const opt = document.createElement('option');
+                    opt.value = sid;
+                    opt.textContent = `Document ${sid}`;
+                    if (sid === id) opt.selected = true;
+                    select.appendChild(opt);
+                });
+
+            select.addEventListener('change', () => {
+                window.location.href = `?id=${select.value}`;
+            });
+        }
+
+        init();
+
+        // Agrandissement au clic sur la carte "sujet"
+        document.addEventListener("DOMContentLoaded", function () {
+            const wrapper = document.querySelector('.pdf-wrapper');
+            const sujetCard = document.querySelector('.pdf-card.sujet');
+            const hint = document.querySelector('.toggle-hint');
+            if (sujetCard && wrapper) {
+                sujetCard.addEventListener('click', function () {
+                    wrapper.classList.toggle('expanded');
+                    if (wrapper.classList.contains('expanded')) {
+                        hint.textContent = "— Cliquer pour réduire";
+                    } else {
+                        hint.textContent = "— Cliquer pour agrandir";
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>
