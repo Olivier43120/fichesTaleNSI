@@ -372,8 +372,19 @@
             document.getElementById('titre-sujet').textContent = sujet.titre || '';
 
             // Le descriptif est volontairement injecté en HTML (contenu défini par l'auteur du site)
-            document.getElementById('description-content').innerHTML =
-                sujet.descriptif || '<p><em>Descriptif indisponible.</em></p>';
+            let description = sujet.descriptif || '<p><em>Descriptif indisponible.</em></p>';
+
+            // Ajout du lien de téléchargement si renseigné
+            if (sujet.lien && sujet.lien.trim() !== "") {
+                description += `
+                    <br><br>
+                    <p style="margin-top:10px; font-weight:bold; color:#065f46;">
+                        Télécharger le <a href="${sujet.lien}" target="_blank">fichier</a>.
+                    </p>
+                `;
+            }
+
+            document.getElementById('description-content').innerHTML = description;
 
             // PDF
             const pdfLink = document.getElementById('pdf-link');
