@@ -315,7 +315,7 @@
                 </div>
 
                 <div class="pdf-card correction">
-                    <div class="pdf-title correction" style="display:flex; justify-content:space-between; align-items:center;">
+                    <div class="pdf-title correction" id="notebook-title" style="display:flex; justify-content:space-between; align-items:center;">
                         ✅ Notebook - avec corrigés
                     </div>
 
@@ -395,8 +395,17 @@
 
             // Notebook (iframe Basthon) — encodage correct de l'URL du notebook
             const notebookFrame = document.getElementById('notebook-frame');
+            const notebookTitle = document.getElementById('notebook-title');
             if (sujet.notebook) {
                 notebookFrame.src = `https://notebook.basthon.fr/?from=${encodeURIComponent(sujet.notebook)}`;
+
+                // Le nom du fichier (avant les éventuels ?paramètres) détermine le libellé affiché
+                const notebookFilename = sujet.notebook.split('/').pop().split('?')[0].toLowerCase();
+                if (notebookFilename.endsWith('correction.ipynb')) {
+                    notebookTitle.textContent = '✅ Notebook - avec corrigés';
+                } else {
+                    notebookTitle.textContent = '📓 Notebook - énoncé';
+                }
             }
 
             // Construction du menu déroulant à partir du manifeste
