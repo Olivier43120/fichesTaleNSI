@@ -2,6 +2,6 @@
     "titre": "Année scolaire 2026-2027",
     "pdf": "pdf/recursivite_1.pdf",
     "notebook": "https://gist.githubusercontent.com/Olivier43120/be19c87aa9d609a736da42b6881ea8a7/raw/f342e046c343581bae7c32f4abe9e4b349595775/recursivite1correction.ipynb",
-    "descriptif": "Exercices de base sur la récursivité. Même si ce n'est pas précisé à chaque exercice, il est intéressant de comparer, dans chacune des situations, la version itérative et la version récursive. On ne s'attardera pas sur la complexité temporelle de ces versions, mais de la simplicité des codes, et de leur lisibilité. Le paradigme récursif, bien que nouveau, propose parfois des codes plus aisé à lire et à comprendre. Nous rencontreront en cours d'année ds structures où la programmation récursive s'impose d'elle même.",
+    "descriptif": "Exercices de base sur la récursivité. Même si ce n'est pas précisé à chaque exercice, il est intéressant de comparer, dans chacune des situations, la version itérative et la version récursive. On ne s'attardera pas sur la complexité temporelle de ces versions, mais de la simplicité des codes, et de leur lisibilité. Le paradigme récursif, bien que nouveau, propose parfois des codes plus aisés à lire et à comprendre. Nous rencontrerons en cours d'année des structures où la programmation récursive s'impose d'elle même.",
     "lien": "archives/recursivite1.zip"
 }
