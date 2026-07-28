@@ -1,6 +1,6 @@
 {
     "titre": "Année scolaire 2026-2027",
-    "pdf": "pdf/recursivite_4.pdf",
+    "pdf": "pdf/recursivite_1.pdf",
     "notebook": "https://gist.githubusercontent.com/Olivier43120/1a0e957f402f8766185a183d0892eac9/raw/a4eee02da03085ea9b56c6bfb4ee49a88f7470fd/chainesBases.ipynb",
     "descriptif": "Il est question ici de manipuler les chaines de caractères, qui ne figurent pas explicitement au programme mais qui sont nécessaires cette année et en classe de Terminale. Une chaine de caractère est délimitée par des apostrophes (ou guillemets), c'est une est une séquence ordonnée de caractères. Elles offrent une riche panoplie de méthodes pour les traiter.",
     "lien": "archives/recursivite4.zip"
