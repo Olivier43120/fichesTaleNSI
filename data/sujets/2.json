@@ -3,5 +3,5 @@
     "pdf": "pdf/recursivite_1.pdf",
     "notebook": "https://gist.githubusercontent.com/Olivier43120/1a0e957f402f8766185a183d0892eac9/raw/a4eee02da03085ea9b56c6bfb4ee49a88f7470fd/chainesBases.ipynb",
     "descriptif": "Exercices de base sur la récursivité. Même si ce n'est pas précisé à chaque exercice, il est intéressant de comparer, dans chacune des situations, la version itérative et la version récursive. On ne s'attardera pas sur la complexité temporelle de ce versions, mais de la simplicité des codes, et de leur lisibilité. Le paradigme récursif, bien que nouveau, propose parfois des codes plus aisé à lire et à comprendre. Nous rencontreront en cours d'année ds structures où la programmation récursive s'impose d'elle même.",
-    "lien": "archives/recursivite4.zip"
+    "lien": "archives/recursivite1.zip"
 }
