@@ -1,7 +1,7 @@
 {
     "titre": "Année scolaire 2026-2027",
     "pdf": "pdf/recursivite_5.pdf",
-    "notebook": "https://gist.githubusercontent.com/Olivier43120/130b2ac9b36d117bc4dc5bc7d1c7309a/raw/2c6e983e233520bc532990bc1c52b7f4fb7d469d/recursivite5correction.ipynb",
+    "notebook": "https://gist.githubusercontent.com/Olivier43120/130b2ac9b36d117bc4dc5bc7d1c7309a/raw/0b336fee276f11530669e168b3b7ce123105aa34/recursivite5correction.ipynb",
     "descriptif": "Parmi les objets mathématiques remarquables, voici les fractales ! Ces figurent géométriques sont conçues à partir d'un motif qui se répète et peut se voir en observant la fractale quel que soit le zoom effectué... A l'intérieur d'une fractale, on voit la même fractale en modèle réduit. Il n'en faut pas plus pour comprendre qu'il s'agit d'une structure récursive. Ces objets intriguent et fascinent : par leur beauté d'une part et par leur utilité pour modéliser le réel (littoraux, arbres, nuages etc etc). Le monde du cinéma ne sy' est pas trompé et y fait fréquemment recours, mais les fractales ont aussi inspiré les fabriquants d'antennes de téléphones portables. Ce TP n'est qu'une porte ouverte sur un monde beaucoup plus vaste !",
     "lien": "archives/recursivite5.zip"
 }
