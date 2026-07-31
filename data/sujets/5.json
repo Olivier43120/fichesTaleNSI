@@ -1,0 +1,7 @@
+{
+    "titre": "Année scolaire 2026-2027",
+    "pdf": "pdf/recursivite_3.pdf",
+    "notebook": "https://gist.githubusercontent.com/Olivier43120/16e0e49c2903ba92e78563eb434f6ede/raw/1bf71491b08d28dc9d5803c53a86cb164f537620/recursivite3.ipynb",
+    "descriptif": "Passage obligé : les programmes itératifs rencontrés en classe de Première peuvent être réécris en récursif en classe de Terminale. C'est le cas sur des situations de base rencontrées sur les chaines de caractaires et les tableaux, comme constaté sur les TP précédents, c'est également le cas sur les algorithmes à réviser et reformuler en récursif.",
+    "lien": "archives/recursivite3.zip"
+}
