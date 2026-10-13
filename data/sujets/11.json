@@ -1,7 +1,7 @@
 {
     "titre": "Année scolaire 2026-2027",
     "pdf": "pdf/POO_1.pdf",
-    "notebook": "https://gist.githubusercontent.com/Olivier43120/23500f4b62f858004119184b570554b1/raw/c66089040ce7cb4b75c6dbef1d9c5a8c349d5ef8/POO_enonce.ipynb",
+    "notebook": "https://gist.githubusercontent.com/Olivier43120/23500f4b62f858004119184b570554b1/raw/c0c918f4eaf51ad3ab97b291366c91d86eeab11d/POO_enonce.ipynb",
     "descriptif": "Après le paradigme récursif, on passe au paradigme Objet. En Python 'tout est objet' : vous avez manipulé des objets dès vos débuts en programmation Python : les listes les chaines de caractères etc etc. Autant Python n'a pas été conçu pour la récursivité, autant la Programmation Objet est un paradigme pour lequel Python a été pensé. Nous nous entrainons sur des exemples naïfs aujourd'hui, pour construire nos propres structures demain. Au travail !",
     "lien": "archives/POO.zip"
 }
