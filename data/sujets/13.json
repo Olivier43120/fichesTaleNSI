@@ -2,6 +2,6 @@
     "titre": "Année scolaire 2026-2027",
     "pdf": "pdf/ListesTPenonce.pdf",
     "notebook": "https://notebook.basthon.fr/?from=https://gist.githubusercontent.com/Olivier43120/c280c472f1eb46ec76deb093cdb09c4a/raw/03f0d4b0a73455d699394f565f7972e915edafeb/listesChaineesEnonce.ipynb",
-    "descriptif": "Début de l'exploration des structures de données ; pour commencer, les "vraies" listes, qui offent quelques avantages dans certains domaines par rapport aux tableaux dynamiques manipulés depuis la classe de Première. Ici, ce sont les listes chainées dont il est question.
+    "descriptif": "Début de l'exploration des structures de données ; pour commencer, les 'vraies' listes, qui offent quelques avantages dans certains domaines par rapport aux tableaux dynamiques manipulés depuis la classe de Première. Ici, ce sont les listes chainées dont il est question.
     "lien": "archives/ListesChaineesEnonce.zip"
 }
