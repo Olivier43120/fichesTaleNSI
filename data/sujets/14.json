@@ -1,7 +1,7 @@
 {
     "titre": "Année scolaire 2026-2027",
     "pdf": "pdf/ListesTPcorrige.pdf",
-    "notebook": "https://notebook.basthon.fr/?from=https://gist.githubusercontent.com/Olivier43120/42115b02ee5b386b8f4a06387e0ddd56/raw/79648b7be6152a176783c67ca4431d284ec6794d/listesChaineesCorrection.ipynb",
+    "notebook": "https://gist.githubusercontent.com/Olivier43120/42115b02ee5b386b8f4a06387e0ddd56/raw/79648b7be6152a176783c67ca4431d284ec6794d/listesChaineesCorrection.ipynb",
     "descriptif": "Début de l'exploration des structures de données ; pour commencer, les 'vraies' listes, qui offent quelques avantages dans certains domaines par rapport aux tableaux dynamiques manipulés depuis la classe de Première. Ici, ce sont les listes chainées dont il est question.",
     "lien": "archives/ListesChaineesCorrection.zip"
 }
