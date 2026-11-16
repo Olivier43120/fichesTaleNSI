@@ -1,7 +1,7 @@
 {
     "titre": "Année scolaire 2026-2027",
     "pdf": "pdf/PilesTP.pdf",
-    "notebook": "https://gist.githubusercontent.com/Olivier43120/b7ba2fa45ace1f7bf7ca0021986c92b1/raw/4b381d7a04da00ee4dd336331f50b1ae1059e9ee/PilesCorrection.ipynb",
+    "notebook": "https://gist.githubusercontent.com/Olivier43120/b7ba2fa45ace1f7bf7ca0021986c92b1/raw/5b6f844bd982e4d3de98f9a0e4492e91c1f89798/PilesCorrection.ipynb",
     "descriptif": "Maintenant que les listes chainées ont été abordées, nous avons les outils pour implémenter une nouvelle structure : les 'piles'. Indispensables en informatiques, vous manipulez régulièrement les piles : lorsque vous faites de la récursivité, lorsque vous utilisez la combinaison Ctrl+Z (Undo),...",
     "lien": "archives/Piles.zip"
 }
