@@ -1,0 +1,7 @@
+{
+    "titre": "Année scolaire 2026-2027",
+    "pdf": "pdf/FilesTP.pdf",
+    "notebook": "https://gist.githubusercontent.com/Olivier43120/eaa6e52cb0a869a3e8aadb9d4736fc36/raw/87e6132b27db9b70137929174030ad98d712e896/FilesCorrection.ipynb",
+    "descriptif": "Maintenant que les listes chainées ont été abordées, nous avons les outils pour implémenter une nouvelle structure : les 'files'. Indispensables en informatique, nousavons besoin de comprendre le fonctionnement des files pour appréhender les ordonnancement de processus, plus tard dans l'année.",
+    "lien": "archives/Files.zip"
+}
