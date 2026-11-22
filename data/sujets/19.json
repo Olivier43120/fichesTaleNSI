@@ -1,0 +1,7 @@
+{
+    "titre": "Année scolaire 2026-2027",
+    "pdf": "pdf/pilesETfiles3.pdf",
+    "notebook": "https://gist.githubusercontent.com/Olivier43120/1cf091e5fa0c2b23bef04cd6b7fdff4f/raw/718d9c3a09dcc32206b347123694ad5e84d825c3/PileFilesEnonce.ipynb",
+    "descriptif": "Maintenant que les structures de piles et de files existent, nous pouvons les utiliser. Les situations les plus courantes sont recensées ici. Les piles seront, cette année, la structure la plus utilisée parmi les deux présentées sur ce document. Le backtracking pour la gestion des jeux, mais aussi et surtout l'évaluation d'expressions NPI et les vérifications de parenthésages corrects constituent des exercices extrêmement classiques qu'il faut maitriser.",
+    "lien": "archives/pilesETfiles3.zip"
+}
